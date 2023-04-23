@@ -2,6 +2,7 @@ package desafio_dio_poo;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Dev {
@@ -14,7 +15,30 @@ public class Dev {
 	
 	
 	
-	public void inscreverBootcamp(Bootcamp bootcamp) {}
+	public void inscreverBootcamp(Bootcamp bootcamp) {		
+		this.conteudosInscritos.addAll(bootcamp.getConteudos());
+		bootcamp.setDevsInscritos(this);
+	}
+	
+	public void progredir() {
+		/* Optional e uma classe java que representa um container de um valor que
+		 * pode ser nulo ou nao. Sua principal utilidade e fornecer uma forma segura
+		 * de tratar valores que podem ser nulos evitando o erro de NullPointerException
+		 */
+		Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst(); // obter o primeiro conteudo inscrito
+		if(conteudo.isPresent()) { // se existir um conteudo na lista de inscrito
+			this.conteudosConcluidos.add(conteudo.get()); // adiciona o conteudo inscrito como concluido
+			this.conteudosInscritos.remove(conteudo.get());
+		}else {
+			System.err.println("Nao matriculado em nenhum curso");
+		}
+		
+	}
+	
+	public double calcularTotalXp() {
+		return this.conteudosConcluidos.stream().mapToDouble(conteudo -> conteudo.calcularXP()).sum();
+	}
+	
 	
 	public Dev(String nome) {
 		this.nome = nome;
@@ -42,9 +66,6 @@ public class Dev {
 		return nome;
 	}
 
-	public void progredir() {}
-	
-	public void calcularTotalXp() {}
 
 	@Override
 	public int hashCode() {

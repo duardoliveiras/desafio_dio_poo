@@ -19,8 +19,8 @@ public class Bootcamp extends Conteudo{
 		return devsInscritos;
 	}
 
-	public void setDevsInscritos(Set<Dev> devsInscritos) {
-		this.devsInscritos = devsInscritos;
+	public void setDevsInscritos(Dev devsInscritos) {
+		this.devsInscritos.add(devsInscritos);
 	}
 
 	public Set<Conteudo> getConteudos() {
