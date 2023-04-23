@@ -14,6 +14,10 @@ public class Bootcamp extends Conteudo{
 	private Set<Dev> devsInscritos = new HashSet<>();
 	private Set<Conteudo> conteudos = new LinkedHashSet<>();
 	
+	public Bootcamp(String titulo, String descricao) {
+		this.titulo = titulo;
+	    this.descricao = descricao;
+	}
 
 	public Set<Dev> getDevsInscritos() {
 		return devsInscritos;
@@ -27,8 +31,8 @@ public class Bootcamp extends Conteudo{
 		return conteudos;
 	}
 
-	public void setConteudos(Set<Conteudo> conteudos) {
-		this.conteudos = conteudos;
+	public void setConteudos(Conteudo conteudos) {
+		this.conteudos.add(conteudos);
 	}
 
 	public LocalDate getDataInicial() {

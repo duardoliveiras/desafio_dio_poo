@@ -6,8 +6,32 @@ public class Main {
 	
 	public static void main(String args[]) {
 		
-		Curso java = new Curso("Java","Conceitos de POO",16);
-		System.out.println(java);
+		Curso curso_java = new Curso("Java","Conceitos de POO",16);
+		Curso curso_sql = new Curso("MySQL","Conceitos de banco de dados relacional",24);
+		Mentoria mentoria_java = new Mentoria("Aula inaugural entendendo conceitos e sintaxe","Sintaxe Java", LocalDate.of(2023,04,20));
+		
+		
+		Bootcamp bootcamp = new Bootcamp("Java Developer","Spring boot, Banco de dados SQL e NoSQL, Java");
+		bootcamp.setConteudos(curso_java);
+		bootcamp.setConteudos(curso_sql);
+		bootcamp.setConteudos(mentoria_java);
+		
+		Dev eduardo = new Dev("Eduardo Oliveira");
+		Dev amanda = new Dev("Amanda Rodrigues");
+		
+		eduardo.inscreverBootcamp(bootcamp);
+		amanda.inscreverBootcamp(bootcamp);
+		
+		System.out.println(eduardo.getConteudosInscritos());
+		System.out.println(amanda.getConteudosInscritos());
+		
+		eduardo.progredir();
+		eduardo.progredir();
+		eduardo.progredir();
+		
+		System.out.println(eduardo.getConteudosInscritos()); 
+		System.out.println(" XP: " + eduardo.calcularTotalXp());  
+	
 		
 		
 	}

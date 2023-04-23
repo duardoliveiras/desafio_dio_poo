@@ -22,11 +22,12 @@ public class Curso extends Conteudo{
 		this.cargaHoraria = cargaHoraria;
 	}
 	
+
+
+
 	@Override
 	public String toString() {
-		return "Curso: "+ this.titulo + "\n" + "Descricao: " + "\n" + "Carga Horaria: " + this.cargaHoraria;
-				
-				
+		return "Curso [cargaHoraria=" + cargaHoraria + ", titulo=" + titulo + ", descricao=" + descricao + "]";
 	}
 
 
