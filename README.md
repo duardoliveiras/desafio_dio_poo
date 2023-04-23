@@ -1,8 +1,13 @@
 # desafio_dio_poo
 Programa desenvolvido para entregar no desafio de POO
 
-Nessa projeto foi utilizado conceitos de heranças: onde foi programado para que classes filhas herdassem atributos de classes mães, provendo a reutilização do código. No caso, criamos uma classe abstrata que não pode ser instanciada e a partir dela definimos suas classes filhas.
-Além disso, usamos também conceito de polimorfismo, onde objetos de diferentes classes são tratados de forma genérica, desde que possuam uma superclasse em comum, possibilitando criamos um código flexível, pois um mesmo método pode ser usado com diferentes tipos de objetos.
-Também utilizamos collections, em especial a hashset e a linkedhashset. As collections nos permite utilizar implementações de estruturas de dados para manipular conjuntos de objetos de forma eficiente. Em especial foi utilizado o linkedhashset pois esse armazena os objetos por ordem de inserção, além de não repitor objetos. Já o hashset que também não repete elementos e foi utilizado pois não precisariamos manter a ordem de inserção.
+Programa desenvolvido como parte de um desafio de Programação Orientada a Objetos (POO). Ele utiliza conceitos de herança, onde classes filhas herdam atributos de classes mães para reutilização de código. Foi criada uma classe abstrata que não pode ser instanciada e a partir dela foram definidas as classes filhas.
 
-A ideia do projeto foi abstrair o conceitos de orientação a objetos transformando um bootcamp com cursos e mentorias em classes filhas de uma classe conteudo, já que tanto um bootcamp, curso e mentoria possui conteúdo. Também criamos a classe dev, com metodos de consultas experiência e inscrever em bootcamp.
+Além disso, o programa utiliza conceito de polimorfismo, onde objetos de diferentes classes são tratados de forma genérica, desde que possuam uma superclasse em comum, permitindo um código flexível com métodos que podem ser usados com diferentes tipos de objetos.
+
+Também foram utilizadas coleções, em particular HashSet e LinkedHashSet. As coleções permitem a implementação de estruturas de dados eficientes para manipulação de conjuntos de objetos. O LinkedHashSet foi escolhido, pois mantém a ordem de inserção dos objetos e não permite elementos duplicados. O HashSet também foi utilizado, no caso onde não era necessário manter a ordem de inserção.
+
+O projeto tem como ideia abstrair conceitos de orientação a objetos, transformando um bootcamp com cursos e mentorias em classes filhas de uma classe "conteudo", já que todos possuem conteúdo. Também foi criada uma classe "dev" com métodos para consulta de experiência, inscrição em bootcamps e progressão.
+
+Como diferencial, adicionei um método para consultas todos integrantes cadastrados no bootcamp, o 'listarInscritos' esse método utiliza-se de um iterator
+que percorre toda a lista set de devs inscritos e imprime o nome em ordem alfabética no console.
