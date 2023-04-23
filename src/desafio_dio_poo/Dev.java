@@ -66,10 +66,9 @@ public class Dev {
 		return nome;
 	}
 
-
 	@Override
 	public int hashCode() {
-		return Objects.hash(conteudosConcluidos, conteudosInscritos);
+		return Objects.hash(conteudosConcluidos, conteudosInscritos, nome);
 	}
 
 	@Override
@@ -82,8 +81,9 @@ public class Dev {
 			return false;
 		Dev other = (Dev) obj;
 		return Objects.equals(conteudosConcluidos, other.conteudosConcluidos)
-				&& Objects.equals(conteudosInscritos, other.conteudosInscritos);
+				&& Objects.equals(conteudosInscritos, other.conteudosInscritos) && Objects.equals(nome, other.nome);
 	}
+
 	/* Utilizando o metodo equals() e hashCode(), para realizar a comparacao dos elementos inseridos na lista
 	 * O metodo hashCode() calcula o valor de hash de um obejto que e um numero inteiro usado pelas colecoes
 	 * para identificar a posicao de um objeto dentro de uma lista hash. O metodo hashCode() deve ser imple-

@@ -1,6 +1,7 @@
 package desafio_dio_poo;
 
 import java.time.LocalDate;
+import java.util.Iterator;
 
 public class Main {
 	
@@ -19,19 +20,25 @@ public class Main {
 		Dev eduardo = new Dev("Eduardo Oliveira");
 		Dev amanda = new Dev("Amanda Rodrigues");
 		
-		eduardo.inscreverBootcamp(bootcamp);
 		amanda.inscreverBootcamp(bootcamp);
+		eduardo.inscreverBootcamp(bootcamp);
+		
+		bootcamp.listarInscritos();
+		
+		eduardo.progredir();
+		eduardo.progredir();
+		eduardo.progredir();
 		
 		System.out.println(eduardo.getConteudosInscritos());
 		System.out.println(amanda.getConteudosInscritos());
 		
-		eduardo.progredir();
-		eduardo.progredir();
-		eduardo.progredir();
 		
-		System.out.println(eduardo.getConteudosInscritos()); 
+		System.out.println(eduardo.getConteudosConcluidos()); 
 		System.out.println(" XP: " + eduardo.calcularTotalXp());  
-	
+		
+		
+		
+		
 		
 		
 	}

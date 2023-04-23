@@ -2,6 +2,7 @@ package desafio_dio_poo;
 
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -24,7 +25,17 @@ public class Bootcamp extends Conteudo{
 	}
 
 	public void setDevsInscritos(Dev devsInscritos) {
+		
 		this.devsInscritos.add(devsInscritos);
+	
+	}
+	public void listarInscritos() {
+		System.out.println("Alunos inscritos:");
+		Iterator<Dev> iterator = this.devsInscritos.iterator();
+		while(iterator.hasNext()) {
+			Dev dev = iterator.next();
+			System.out.println("Nome: " + dev.getNome());
+		}
 	}
 
 	public Set<Conteudo> getConteudos() {
